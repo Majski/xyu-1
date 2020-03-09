@@ -115,3 +115,15 @@ select {
     /* Safari, Android, iOS */
       url("/fonts/roboto-v20-latin-ext_latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
 }
+
+p {
+  font-size: 19px;
+}
+
+span {
+  font-size: 17px;
+}
+
+h2 {
+  font-size: 17px;
+}
