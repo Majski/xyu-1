@@ -2,11 +2,11 @@ import React from "react";
 import { SmoothHeightResizer } from "../ui/SmoothHeightResizer";
 import { BlockWrapper } from "../ui/BlockWrapper";
 
-export const ExpanderSection = ({ title, imgSrc, children }) => {
+export const ExpanderSection = ({ title, imgSrc, children, ...rest }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   return (
-    <section css={{ backgroundColor: "#000" }}>
+    <section css={{ backgroundColor: "#000" }} {...rest}>
       <BlockWrapper
         role="button"
         onClick={() => setIsExpanded(!isExpanded)}

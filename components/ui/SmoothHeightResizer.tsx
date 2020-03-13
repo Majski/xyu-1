@@ -13,7 +13,7 @@ const SmoothHeightResizerComponent: React.FC<JSX.IntrinsicElements["div"] & {
   });
   return (
     <animated.div style={styles} css={{ overflow: "hidden" }}>
-      <div css={{ minHeight: 1 }} {...bind} {...rest}>
+      <div css={{ minHeight: 0 }} {...bind} {...rest}>
         {children}
       </div>
     </animated.div>
