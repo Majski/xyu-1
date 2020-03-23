@@ -1,14 +1,11 @@
 import React from "react";
-import { BlockWrapper } from "../ui/BlockWrapper";
 
-import { animated, useSpring } from "react-spring";
+import { BlockWrapper } from "../ui/BlockWrapper";
+import { Shelf } from "../ui/Shelf";
+import { HamburgerButton } from "./HamburgerButton";
 
 export const Header = () => {
   const [isMenuVisible, setIsMenuVisible] = React.useState(false);
-
-  const menuStyles = useSpring({
-    transform: `translateX(${isMenuVisible ? 0 : "100vw"})`
-  });
 
   return (
     <header css={{ height: 52, backgroundColor: "#000" }}>
@@ -17,7 +14,8 @@ export const Header = () => {
           height: "100%",
           position: "relative",
           display: "flex",
-          justifyContent: "flex-end"
+          justifyContent: "flex-end",
+          alignItems: "center"
         }}
       >
         {/* <div>
@@ -38,40 +36,35 @@ export const Header = () => {
         >
           <img src="/images/logo-white.png" css={{ width: "100%" }} />
         </a>
-        <button
+        <HamburgerButton
           onClick={() => setIsMenuVisible(!isMenuVisible)}
+          isActive={isMenuVisible}
+        />
+      </BlockWrapper>
+      <Shelf isVisible={isMenuVisible}>
+        <div
           css={{
-            zIndex: 500,
-            width: 30,
-            height: 20,
-            padding: 0,
-            border: "none",
-            backgroundColor: "transparent",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "space-between",
-            alignItems: "stretch"
+            padding: "50px 35px",
+            minHeight: "100%",
+            justifyContent: "center",
+            a: {
+              fontSize: 20,
+              textDecoration: "none",
+              marginBottom: 15,
+              fontWeight: "lighter"
+            }
           }}
         >
-          <div css={{ height: 3, backgroundColor: "#fff" }} />
-          <div css={{ height: 3, backgroundColor: "#fff" }} />
-          <div css={{ height: 3, backgroundColor: "#fff" }} />
-        </button>
-      </BlockWrapper>
-      <animated.div
-        style={menuStyles}
-        css={{
-          width: "100vh",
-          height: "100vh",
-          backgroundColor: "#000",
-          position: "fixed",
-          top: 0,
-          bottom: 0,
-          left: 0,
-          right: 0,
-          zIndex: 400
-        }}
-      ></animated.div>
+          <a href="">Kim jesteśmy?</a>
+          <a href="">Gdzie nas znajdziesz?</a>
+          <a href="">Jak nas wesprzeć?</a>
+          <a href="">Biblioteka</a>
+          <a href="">Akordy</a>
+          <a href="">Kontakt</a>
+        </div>
+      </Shelf>
     </header>
   );
 };

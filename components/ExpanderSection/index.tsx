@@ -12,7 +12,7 @@ export const ExpanderSection = ({ title, imgSrc, children, ...rest }) => {
         onClick={() => setIsExpanded(!isExpanded)}
         css={{
           cursor: "pointer",
-          height: 100,
+          height: 70,
           display: "flex",
           alignItems: "center"
         }}

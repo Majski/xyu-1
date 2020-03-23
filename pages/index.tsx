@@ -29,7 +29,7 @@ const Index = () => {
       <ExpanderSection
         title="Nasz dom"
         imgSrc="/images/IMG_4112.png"
-        css={{ marginBottom: 45 }}
+        css={{ marginBottom: 10 }}
       >
         <p css={{ marginBottom: 90 }}>
           XY Uwielbienie to muzyka i treści płynące z serca ludzi z kościoła
@@ -81,7 +81,7 @@ const Index = () => {
       <ExpanderSection
         title="Gdzie nas znajdziesz?"
         imgSrc="/images/IMG_3.png"
-        css={{ marginBottom: 45 }}
+        css={{ marginBottom: 10 }}
       >
         <p css={{ paddingBottom: 30 }}>
           W każdą pierwszą środę miesiąca, podczas Wieczorów Uwielbienia,
@@ -96,7 +96,7 @@ const Index = () => {
       <ExpanderSection
         title="Jak możesz nas wesprzeć?"
         imgSrc="/images/IMG_3.png"
-        css={{ marginBottom: 45 }}
+        css={{ marginBottom: 20 }}
       >
         <p css={{ marginBottom: 30 }}>
           Przede wszystkim potrzebujemy Twojej modlitwy. To najcenniejsze, co

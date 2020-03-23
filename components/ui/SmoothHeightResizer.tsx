@@ -8,7 +8,7 @@ const SmoothHeightResizerComponent: React.FC<JSX.IntrinsicElements["div"] & {
   const { bind, bounds } = useMeasure<HTMLDivElement>();
   const styles = useSpring({
     height: bounds.height,
-    config: { ...config.default, clamp: true },
+    config: { ...config.slow, clamp: true },
     onRest
   });
   return (

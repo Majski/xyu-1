@@ -89,7 +89,7 @@ export const Discography = () => {
             y="0px"
             viewBox="0 0 490.656 490.656"
             xmlSpace="preserve"
-            width="30px"
+            height="25px"
             css={{ transform: "rotate(-90deg)" }}
           >
             <path
