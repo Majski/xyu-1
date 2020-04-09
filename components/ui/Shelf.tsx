@@ -17,7 +17,7 @@ export const Shelf: React.FC<Shelf> = ({ isVisible, children, ...rest }) => {
       <animated.div
         style={styles}
         css={{
-          width: "100vh",
+          width: "100vw",
           height: "100vh",
           backgroundColor: "#000",
           position: "fixed",
@@ -25,7 +25,8 @@ export const Shelf: React.FC<Shelf> = ({ isVisible, children, ...rest }) => {
           bottom: 0,
           left: 0,
           right: 0,
-          zIndex: 400
+          zIndex: 400,
+          overflowY: "auto"
         }}
         {...rest}
       >

@@ -2,14 +2,16 @@ import React from "react";
 import { useSpring, animated, config } from "react-spring";
 import { useMeasure } from "../../hooks/useMeasure";
 
-const SmoothHeightResizerComponent: React.FC<JSX.IntrinsicElements["div"] & {
-  onRest?: () => void;
-}> = React.memo(({ children, onRest, ...rest }) => {
+const SmoothHeightResizerComponent: React.FC<
+  JSX.IntrinsicElements["div"] & {
+    onRest?: () => void;
+  }
+> = React.memo(({ children, onRest, ...rest }) => {
   const { bind, bounds } = useMeasure<HTMLDivElement>();
   const styles = useSpring({
     height: bounds.height,
     config: { ...config.slow, clamp: true },
-    onRest
+    onRest,
   });
   return (
     <animated.div style={styles} css={{ overflow: "hidden" }}>
@@ -20,6 +22,6 @@ const SmoothHeightResizerComponent: React.FC<JSX.IntrinsicElements["div"] & {
   );
 });
 
-export const SmoothHeightResizer: React.FC<JSX.IntrinsicElements["div"]> = props => (
-  <SmoothHeightResizerComponent {...props} />
-);
+export const SmoothHeightResizer: React.FC<JSX.IntrinsicElements["div"]> = (
+  props
+) => <SmoothHeightResizerComponent {...props} />;

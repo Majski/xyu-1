@@ -1,19 +1,37 @@
 import React from "react";
 
-export const Banner = () => {
+import { Interpolation } from "@emotion/core";
+
+interface BannerProps {
+  title: string;
+  imageSrc: string;
+  titleCss?: Interpolation;
+  wrapperCss?: Interpolation;
+}
+
+export const Banner: React.FC<BannerProps> = ({
+  title,
+  imageSrc,
+  titleCss,
+  wrapperCss,
+}) => {
   return (
     <section
-      css={{
-        height: 250,
-        backgroundImage: `url("/images/IMG_4112.png")`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center"
-      }}
+      css={[
+        {
+          height: 250,
+          backgroundImage: `url("${imageSrc}")`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top, center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        },
+        wrapperCss,
+      ]}
     >
-      <h1>XY UWIELBIENIE</h1>
+      <h1 css={titleCss}>{title}</h1>
     </section>
   );
 };

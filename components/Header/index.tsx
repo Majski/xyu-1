@@ -3,12 +3,27 @@ import React from "react";
 import { BlockWrapper } from "../ui/BlockWrapper";
 import { Shelf } from "../ui/Shelf";
 import { HamburgerButton } from "./HamburgerButton";
+import { useAppContext } from "../../contexts/AppContext";
 
 export const Header = () => {
-  const [isMenuVisible, setIsMenuVisible] = React.useState(false);
+  const { isMenuVisible, isShelfVisible, dispatch } = useAppContext();
+
+  const onHamburgerClick = React.useCallback(() => {
+    dispatch({ type: "menuVisible", payload: !isMenuVisible });
+    dispatch({ type: "shelfVisible", payload: false });
+  }, [dispatch, isMenuVisible]);
 
   return (
-    <header css={{ height: 52, backgroundColor: "#000" }}>
+    <header
+      css={{
+        height: 52,
+        backgroundColor: "#000",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0
+      }}
+    >
       <BlockWrapper
         css={{
           height: "100%",
@@ -36,10 +51,7 @@ export const Header = () => {
         >
           <img src="/images/logo-white.png" css={{ width: "100%" }} />
         </a>
-        <HamburgerButton
-          onClick={() => setIsMenuVisible(!isMenuVisible)}
-          isActive={isMenuVisible}
-        />
+        <HamburgerButton onClick={onHamburgerClick} isActive={isMenuVisible} />
       </BlockWrapper>
       <Shelf isVisible={isMenuVisible}>
         <div
