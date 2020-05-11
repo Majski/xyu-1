@@ -3,8 +3,18 @@ import React from "react";
 import { BlockWrapper } from "../ui/BlockWrapper";
 import { Shelf } from "../ui/Shelf";
 import { useAppContext } from "../../contexts/AppContext";
+import { Footer } from "../Footer";
 
-export const ShelfSection = ({ title, children, ...rest }) => {
+export interface ShelfSectionProps {
+  title: string;
+  content: string;
+}
+
+export const ShelfSection: React.FC<ShelfSectionProps> = ({
+  title,
+  content,
+  ...rest
+}) => {
   const { isShelfVisible, dispatch } = useAppContext();
 
   const onOpenShelf = React.useCallback(() => {
@@ -61,7 +71,8 @@ export const ShelfSection = ({ title, children, ...rest }) => {
             </svg>
             <span>{title}</span>
           </button>
-          {children}
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <Footer />
         </BlockWrapper>
       </Shelf>
     </section>

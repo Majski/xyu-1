@@ -2,25 +2,25 @@ import React from "react";
 
 import { Interpolation } from "@emotion/core";
 
-interface BannerProps {
+export interface BannerProps {
   title: string;
-  imageSrc: string;
+  imgSrc: string;
   titleCss?: Interpolation;
   wrapperCss?: Interpolation;
 }
 
 export const Banner: React.FC<BannerProps> = ({
   title,
-  imageSrc,
-  titleCss,
-  wrapperCss,
+  imgSrc,
+  // titleCss,
+  // wrapperCss,
 }) => {
   return (
     <section
       css={[
         {
           height: 250,
-          backgroundImage: `url("${imageSrc}")`,
+          backgroundImage: `url("${imgSrc}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "top, center",
@@ -28,10 +28,10 @@ export const Banner: React.FC<BannerProps> = ({
           alignItems: "center",
           justifyContent: "center",
         },
-        wrapperCss,
+        // wrapperCss,
       ]}
     >
-      <h1 css={titleCss}>{title}</h1>
+      <h1>{title}</h1>
     </section>
   );
 };

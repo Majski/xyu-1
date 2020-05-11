@@ -2,11 +2,21 @@ import React from "react";
 import { SmoothHeightResizer } from "../ui/SmoothHeightResizer";
 import { BlockWrapper } from "../ui/BlockWrapper";
 
-export const ExpanderSection = ({ title, imgSrc, children, ...rest }) => {
+export interface ExpanderSectionProps {
+  title: string;
+  imgSrc: string;
+  content: string;
+}
+
+export const ExpanderSection: React.FC<ExpanderSectionProps> = ({
+  title,
+  imgSrc,
+  content,
+}) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   return (
-    <section css={{ backgroundColor: "#000" }} {...rest}>
+    <section css={{ backgroundColor: "#000" }}>
       <BlockWrapper
         role="button"
         onClick={() => setIsExpanded(!isExpanded)}
@@ -14,7 +24,7 @@ export const ExpanderSection = ({ title, imgSrc, children, ...rest }) => {
           cursor: "pointer",
           height: 70,
           display: "flex",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <svg
@@ -23,7 +33,7 @@ export const ExpanderSection = ({ title, imgSrc, children, ...rest }) => {
           height="25px"
           css={{
             transform: `rotate(${isExpanded ? 0 : 90}deg)`,
-            transition: "transform .15s"
+            transition: "transform .15s",
           }}
         >
           <path
@@ -36,7 +46,10 @@ export const ExpanderSection = ({ title, imgSrc, children, ...rest }) => {
       <SmoothHeightResizer>
         <div css={{ height: isExpanded ? "auto" : 0 }}>
           <img src={imgSrc} css={{ marginBottom: 50 }} />
-          <BlockWrapper>{children}</BlockWrapper>
+          <BlockWrapper
+            dangerouslySetInnerHTML={{ __html: content }}
+            css={{ paddingBottom: 40 }}
+          ></BlockWrapper>
         </div>
       </SmoothHeightResizer>
     </section>

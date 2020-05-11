@@ -1,9 +1,11 @@
 import React from "react";
+import Link from "next/link";
 
 import { BlockWrapper } from "../ui/BlockWrapper";
 import { Shelf } from "../ui/Shelf";
 import { HamburgerButton } from "./HamburgerButton";
 import { useAppContext } from "../../contexts/AppContext";
+import { Footer } from "../Footer";
 
 export const Header = () => {
   const { isMenuVisible, isShelfVisible, dispatch } = useAppContext();
@@ -21,7 +23,7 @@ export const Header = () => {
         position: "fixed",
         top: 0,
         left: 0,
-        right: 0
+        right: 0,
       }}
     >
       <BlockWrapper
@@ -30,7 +32,7 @@ export const Header = () => {
           position: "relative",
           display: "flex",
           justifyContent: "flex-end",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         {/* <div>
@@ -38,19 +40,21 @@ export const Header = () => {
           <a href="">YouTube</a>
           <a href="">Facebook</a>
         </div> */}
-        <a
-          href=""
-          css={{
-            position: "absolute",
-            transform: "translate(-50%, -50%)",
-            top: "50%",
-            left: "50%",
-            width: 50,
-            height: 50
-          }}
-        >
-          <img src="/images/logo-white.png" css={{ width: "100%" }} />
-        </a>
+        <Link href="/">
+          <a
+            href=""
+            css={{
+              position: "absolute",
+              transform: "translate(-50%, -50%)",
+              top: "50%",
+              left: "50%",
+              width: 50,
+              height: 50,
+            }}
+          >
+            <img src="/images/logo-white.png" css={{ width: "100%" }} />
+          </a>
+        </Link>
         <HamburgerButton onClick={onHamburgerClick} isActive={isMenuVisible} />
       </BlockWrapper>
       <Shelf isVisible={isMenuVisible}>
@@ -65,8 +69,8 @@ export const Header = () => {
               fontSize: 20,
               textDecoration: "none",
               marginBottom: 15,
-              fontWeight: "lighter"
-            }
+              fontWeight: "lighter",
+            },
           }}
         >
           <a href="">Kim jesteśmy?</a>
@@ -75,6 +79,7 @@ export const Header = () => {
           <a href="">Biblioteka</a>
           <a href="">Akordy</a>
           <a href="">Kontakt</a>
+          <Footer />
         </div>
       </Shelf>
     </header>

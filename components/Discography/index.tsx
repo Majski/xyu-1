@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 import { BlockWrapper } from "../ui/BlockWrapper";
 import { ImageButton } from "../ImageButton";
 
@@ -15,8 +17,8 @@ export const Discography = () => {
       >
         Nasza twórczość
       </h2>
-      <ImageButton imageSrc="/images/IMG_1.png">Czekam na Ciebie</ImageButton>
-      <ImageButton imageSrc="/images/IMG_2.png" css={{ marginTop: 5 }}>
+      <ImageButton imgSrc="/images/IMG_1.png">Czekam na Ciebie</ImageButton>
+      <ImageButton imgSrc="/images/IMG_2.png" css={{ marginTop: 5 }}>
         Grace to Grace
         <span css={{ fontSize: 14, display: "block", lineHeight: 1 }}>
           Łaski cud
@@ -31,17 +33,18 @@ export const Discography = () => {
             justifyContent: "flex-end",
           }}
         >
-          <a
-            href=""
-            css={{
-              color: "#000",
-              textDecoration: "none",
-              marginRight: 15,
-              fontSize: 14,
-            }}
-          >
-            Cała dyskografia
-          </a>
+          <Link href="/songs">
+            <a
+              css={{
+                color: "#000",
+                textDecoration: "none",
+                marginRight: 15,
+                fontSize: 14,
+              }}
+            >
+              Cała dyskografia
+            </a>
+          </Link>
           <svg
             version="1.1"
             id="Capa_1"

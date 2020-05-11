@@ -1,16 +1,15 @@
 import React from "react";
 import { BlockWrapper } from "../ui/BlockWrapper";
 
-export const ImageButton = ({ imageSrc, children, ...rest }) => (
-  <>
+export const ImageButton = ({ imgSrc, children, ...rest }) => (
+  <div {...rest}>
     <div
       css={{
         height: 60,
-        backgroundImage: `url("${imageSrc}")`,
+        backgroundImage: `url("${imgSrc}")`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      {...rest}
     />
     <div
       role="button"
@@ -37,5 +36,5 @@ export const ImageButton = ({ imageSrc, children, ...rest }) => (
         </svg>
       </BlockWrapper>
     </div>
-  </>
+  </div>
 );
