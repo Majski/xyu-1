@@ -55,7 +55,7 @@ export const ShelfSection: React.FC<ShelfSectionProps> = ({
       >
         <BlockWrapper>
           <button
-            css={{ display: "flex", marginBottom: 40 }}
+            css={{ display: "flex", marginBottom: 40, cursor: "pointer" }}
             onClick={onCloseShelf}
           >
             <svg

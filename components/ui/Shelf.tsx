@@ -9,7 +9,7 @@ interface Shelf {
 
 export const Shelf: React.FC<Shelf> = ({ isVisible, children, ...rest }) => {
   const styles = useSpring({
-    transform: `translateX(${isVisible ? 0 : "100vw"})`
+    transform: `translateX(${isVisible ? 0 : "100vw"})`,
   });
 
   return (
@@ -26,7 +26,7 @@ export const Shelf: React.FC<Shelf> = ({ isVisible, children, ...rest }) => {
           left: 0,
           right: 0,
           zIndex: 400,
-          overflowY: "auto"
+          overflowY: "auto",
         }}
         {...rest}
       >

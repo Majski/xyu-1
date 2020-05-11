@@ -17,8 +17,14 @@ export const Discography = () => {
       >
         Nasza twórczość
       </h2>
-      <ImageButton imgSrc="/images/IMG_1.png">Czekam na Ciebie</ImageButton>
-      <ImageButton imgSrc="/images/IMG_2.png" css={{ marginTop: 5 }}>
+      <ImageButton imgSrc="/images/IMG_1.png" href="songs/czekam-na-ciebie">
+        Czekam na Ciebie
+      </ImageButton>
+      <ImageButton
+        imgSrc="/images/IMG_2.png"
+        href="songs/grace-to-grace"
+        css={{ marginTop: 5 }}
+      >
         Grace to Grace
         <span css={{ fontSize: 14, display: "block", lineHeight: 1 }}>
           Łaski cud
@@ -40,6 +46,7 @@ export const Discography = () => {
                 textDecoration: "none",
                 marginRight: 15,
                 fontSize: 14,
+                cursor: "pointer",
               }}
             >
               Cała dyskografia

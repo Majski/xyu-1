@@ -3,7 +3,7 @@ import React from "react";
 import { Interpolation } from "@emotion/core";
 
 export interface BannerProps {
-  title: string;
+  title?: string;
   imgSrc: string;
   titleCss?: Interpolation;
   wrapperCss?: Interpolation;
@@ -31,7 +31,7 @@ export const Banner: React.FC<BannerProps> = ({
         // wrapperCss,
       ]}
     >
-      <h1>{title}</h1>
+      {title && <h1>{title}</h1>}
     </section>
   );
 };

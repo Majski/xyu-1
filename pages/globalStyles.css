@@ -132,3 +132,9 @@ span {
 h2 {
   font-size: 17px;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}

@@ -78,6 +78,12 @@ export const indexData = {
       },
     },
     {
+      type: "Spacer",
+      data: {
+        height: 10,
+      },
+    },
+    {
       type: "ShelfSection",
       data: {
         title: "Jezus",
@@ -130,6 +136,12 @@ export const indexData = {
       },
     },
     {
+      type: "Spacer",
+      data: {
+        height: 10,
+      },
+    },
+    {
       type: "ExpanderSection",
       data: {
         title: "Gdzie nas znajdziesz?",
@@ -145,6 +157,12 @@ export const indexData = {
           coraz więcej!
         </p>
         `,
+      },
+    },
+    {
+      type: "Spacer",
+      data: {
+        height: 10,
       },
     },
     {
@@ -175,6 +193,12 @@ export const indexData = {
           Tytuł przelewu: XY Uwielbienie
         </p>
         `,
+      },
+    },
+    {
+      type: "Spacer",
+      data: {
+        height: 20,
       },
     },
   ],
