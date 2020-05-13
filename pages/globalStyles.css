@@ -138,3 +138,7 @@ button {
   border: none;
   box-shadow: none;
 }
+
+body {
+  background-color: #000;
+}

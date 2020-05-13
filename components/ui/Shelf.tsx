@@ -19,12 +19,13 @@ export const Shelf: React.FC<Shelf> = ({
   const { width: screenWidth } = useWindowDimensions();
   const { screenSizes } = theme;
 
-  width = screenWidth > screenSizes.TABLET ? "30vw" : "100vw";
-
   const styles = useSpring({
-    transform: `translateX(${isVisible ? 0 : width})`,
-    left: `calc(100vw - ${width})`,
+    transform: `translateX(${isVisible ? 0 : "100%"})`,
   });
+
+  React.useEffect(() => {
+    width = screenWidth > screenSizes.TABLET ? "30vw" : "100vw";
+  }, [screenWidth]);
 
   return (
     <RemoveScroll enabled={isVisible}>
@@ -36,7 +37,6 @@ export const Shelf: React.FC<Shelf> = ({
           backgroundColor: "#000",
           position: "fixed",
           top: 0,
-          bottom: 0,
           right: 0,
           zIndex: 400,
           overflowY: "auto",
