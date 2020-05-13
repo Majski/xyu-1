@@ -1,15 +1,21 @@
 import React from "react";
+import { Interpolation } from "@emotion/core";
 
-export const BlockWrapper: React.FC<JSX.IntrinsicElements["div"]> = ({
-  children,
-  ...rest
-}) => {
+interface BlockWrapperProps {
+  wrapperCss?: Interpolation;
+}
+
+export const BlockWrapper: React.FC<
+  BlockWrapperProps & JSX.IntrinsicElements["div"]
+> = ({ children, wrapperCss, ...rest }) => {
   return (
-    <div
-      css={{ maxWidth: 1024, margin: "0 auto", padding: "0 40px" }}
-      {...rest}
-    >
-      {children}
-    </div>
+    <section css={wrapperCss}>
+      <div
+        css={{ maxWidth: 1240, margin: "0 auto", padding: "0 40px" }}
+        {...rest}
+      >
+        {children}
+      </div>
+    </section>
   );
 };

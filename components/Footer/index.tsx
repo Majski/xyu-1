@@ -2,9 +2,9 @@ import React from "react";
 import { BlockWrapper } from "../ui/BlockWrapper";
 import { Social } from "./Social";
 
-export const Footer = () => {
+export const Footer = ({ ...rest }) => {
   return (
-    <footer css={{ backgroundColor: "#000", padding: "40px 0" }}>
+    <footer css={{ backgroundColor: "#000", padding: "40px 0" }} {...rest}>
       <BlockWrapper>
         <div>
           <img
@@ -19,8 +19,8 @@ export const Footer = () => {
                 fontSize: 20,
                 textDecoration: "none",
                 marginBottom: 15,
-                fontWeight: "lighter"
-              }
+                fontWeight: "lighter",
+              },
             }}
           >
             <a href="">Kim jesteśmy?</a>
@@ -40,7 +40,7 @@ export const Footer = () => {
               fontWeight: "lighter",
               textAlign: "center",
               fontSize: 14,
-              marginTop: 25
+              marginTop: 25,
             }}
           >
             Społeczność Chrześcijańska Południe ul. Mińska 65, 03-828 Warszawa
