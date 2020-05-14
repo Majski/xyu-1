@@ -6,18 +6,19 @@ import { Footer } from "../components/Footer";
 import { Contents } from "../components/Contents";
 
 import { indexData } from "../data/index";
-import { theme } from "../Theme";
+import { Desktop } from "../components/Desktop";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const Index = () => {
   const { components } = indexData;
-
-  const { bp } = theme;
+  const { isMobile } = useIsMobile();
 
   return (
     <>
       <Header />
-      <div css={{ height: 50, [bp.FROM_TABLET]: { height: 100 } }} />
-      <Contents components={components} />
+      <div css={{ height: isMobile ? 52 : 100 }} />
+      {isMobile && <Contents components={components} />}
+      {!isMobile && <Desktop />}
       <Footer />
     </>
   );
