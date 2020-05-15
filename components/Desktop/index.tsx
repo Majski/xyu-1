@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Desktop = () => {
   return (
-    <div>
+    <div css={{ position: "relative" }}>
       <div
         css={{
           backgroundAttachment: "fixed",
@@ -84,7 +84,13 @@ export const Desktop = () => {
           }}
         ></div>
       </BlockWrapper>
-      <div css={{ backgroundColor: "#fff", padding: "120px 0 50px 0" }}>
+      <div
+        css={{
+          backgroundColor: "#fff",
+          padding: "120px 0 50px 0",
+          position: "relative",
+        }}
+      >
         <BlockWrapper>
           <div css={{ maxWidth: 1100, marginRight: "auto" }}>
             <h2
@@ -406,6 +412,8 @@ export const Desktop = () => {
               "url(https://images.unsplash.com/photo-1527389123978-53405521c094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3209&q=80)",
             backgroundSize: "cover",
             backgroundPosition: "0 710px",
+            position: "sticky",
+            top: 100,
           }}
         />
         <div
@@ -415,8 +423,26 @@ export const Desktop = () => {
             padding: "100px 0",
           }}
         >
-          <BlockWrapper>
+          <BlockWrapper css={{ marginTop: 200 }}>
             <h2 css={{ fontSize: 50, fontWeight: "bold" }}>Jezus</h2>
+            <p css={{ fontWeight: "lighter", marginBottom: 50 }}>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt.
+            </p>
+            <p>
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+              ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+              consequatur? Quis autem vel eum iure reprehenderit qui in ea
+              voluptate velit esse quam nihil molestiae consequatur, vel illum
+              qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </p>
           </BlockWrapper>
         </div>
         <div
@@ -426,6 +452,8 @@ export const Desktop = () => {
               "url(https://images.unsplash.com/photo-1527389123978-53405521c094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3209&q=80)",
             backgroundSize: "cover",
             backgroundPosition: "bottom",
+            position: "sticky",
+            top: 450,
           }}
         />
         <div css={{ backgroundColor: "white" }}>
@@ -495,6 +523,7 @@ export const Desktop = () => {
               "url(https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80)",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            zIndex: 200,
           }}
         />
         <div css={{ backgroundColor: "white" }}>
