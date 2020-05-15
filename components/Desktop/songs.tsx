@@ -1,31 +1,42 @@
 import React from "react";
 import { BlockWrapper } from "../ui/BlockWrapper";
 import Link from "next/link";
+import { Song } from "./components/Song";
 
 export const Songs = () => {
   return (
     <div>
-      <div
+      <section
         css={{
-          height: "50vh",
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1528828085966-aff4e01c5f2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
+          height: "calc(100vh - 100px)",
+          backgroundColor: "#fff",
+          position: "relative",
         }}
-      />
-      <div css={{ backgroundColor: "#fff" }}>
-        <BlockWrapper>
+      >
+        <div
+          css={{
+            height: "50vh",
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1528828085966-aff4e01c5f2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        />
+        <div>
           <div
             css={{
               height: "60vh",
+              maxWidth: 1160,
+              width: "100%",
+              left: "50%",
+              right: "50%",
               backgroundColor: "#000",
-              position: "relative",
-              top: -300,
-              margin: "0 auto",
+              position: "absolute",
               display: "flex",
               padding: 50,
+              margin: "0 auto",
+              transform: "translate(-50%, -50%)",
             }}
           >
             <div
@@ -97,10 +108,42 @@ export const Songs = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+      <section css={{ backgroundColor: "#fff", paddingBottom: 50 }}>
+        <BlockWrapper>
+          <h1 css={{ color: "#000", fontSize: 60, marginBottom: 50 }}>
+            Cała dyskografia
+          </h1>
+          <Song
+            title="Czekam na Ciebie"
+            imgSrc="https://images.unsplash.com/photo-1555819206-7b30da4f1506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2851&q=80"
+            url="songs/czekam-na-ciebie"
+          />
+          <Song
+            title="Grace to grace"
+            subtitle="Łaski cud"
+            imgSrc="https://images.unsplash.com/photo-1508366717390-1b54517b6cce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+            url="songs/laski-cud"
+          />
+          <Song
+            title="Nie patrzę wstecz"
+            imgSrc="https://images.unsplash.com/photo-1589265421704-0fdac9917785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            url="songs/nie-patrze-wstecz"
+          />
+          <Song
+            title="Sinking deep"
+            imgSrc="https://images.unsplash.com/photo-1588547347393-7c40217437b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            url="songs/sinking-deep"
+          />
+          <Song
+            title="Only wanna sing"
+            subtitle="Tylko śpiewać chcę"
+            imgSrc="https://images.unsplash.com/photo-1507697364665-69eec30ea71e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            url="songs/laski-cud"
+          />
         </BlockWrapper>
-      </div>
-
-      <div css={{ height: "100vh", backgroundColor: "#fff" }} />
+      </section>
     </div>
   );
 };
