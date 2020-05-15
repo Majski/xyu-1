@@ -1,39 +1,25 @@
 import React from "react";
 
-import { animated, useSpring } from "react-spring";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
-export const Sandbox = () => {
-  return <h1>lorem</h1>;
+import { Contents } from "../components/Contents";
 
-  // const [isActive, setIsActive] = React.useState(false);
+import { indexData } from "../data/new/index";
+import { useIsMobile } from "../hooks/useIsMobile";
 
-  // const styles = useSpring({
-  //   transform: `translateX(${isActive ? "0" : "100%"})`,
-  // });
+const Index = () => {
+  const { components } = indexData;
+  const { isMobile } = useIsMobile();
 
-  // const onClick = React.useCallback(() => {
-  //   setIsActive(!isActive);
-  // }, [isActive, setIsActive]);
-
-  // return (
-  //   <div>
-  //     <div onClick={onClick} css={{ width: 500, height: 500, color: "white" }}>
-  //       click me
-  //     </div>
-  //     <animated.div
-  //       style={styles}
-  //       css={{
-  //         backgroundColor: "white",
-  //         height: "100vh",
-  //         display: "flex",
-  //         width: 800,
-  //         position: "fixed",
-  //         top: 0,
-  //         right: 0,
-  //       }}
-  //     ></animated.div>
-  //   </div>
-  // );
+  return (
+    <>
+      <Header />
+      <div css={{ height: isMobile ? 52 : 100 }} />
+      <Contents components={components} />
+      <Footer />
+    </>
+  );
 };
 
-export default Sandbox;
+export default Index;

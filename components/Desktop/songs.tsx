@@ -73,7 +73,7 @@ export const Songs = () => {
               }}
             >
               <p css={{ fontSize: 70, fontWeight: "lighter" }}>Łaski cud</p>
-              <Link href="">
+              <Link href="/songs/laski-cud">
                 <a
                   css={{
                     alignSelf: "flex-end",

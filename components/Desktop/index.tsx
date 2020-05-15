@@ -2,182 +2,30 @@ import React from "react";
 import { BlockWrapper } from "../ui/BlockWrapper";
 import Link from "next/link";
 import { Song } from "./components/Song";
+import { CoverPhoto } from "../new/CoverPhoto";
+import { Billboard } from "../new/Billboard";
+import { LinksGroup } from "../new/LinksGroup";
+
+import { linksGroupData, collageData } from "../../data/new/index";
+import { Collage } from "../new/Collage";
+import { Spacer } from "../Spacer";
 
 export const Desktop = () => {
   return (
     <div>
-      <div
-        css={{
-          backgroundAttachment: "fixed",
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1515276427842-f85802d514a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3155&q=80)",
-          backgroundSize: "cover",
-          height: "calc(100vh - 100px)",
-        }}
-      >
-        <BlockWrapper
-          wrapperCss={{ height: "100%" }}
-          css={{
-            position: "relative",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100%",
-          }}
-        >
-          <div
-            css={{
-              width: 500,
-              height: 800,
-              backgroundColor: "#fff",
-              opacity: 0.6,
-              position: "absolute",
-              left: 40,
-              bottom: -100,
-            }}
-          />
-          <h1
-            css={{
-              fontSize: 120,
-              zIndex: 100,
-              textShadow: "12px 5px 0px rgba(0,0,0,1)",
-            }}
-          >
-            XY UWIELBIENIE
-          </h1>
-        </BlockWrapper>
-      </div>
-      <BlockWrapper css={{ height: "70vh", display: "flex", paddingTop: 120 }}>
-        <div
-          css={{
-            flexBasis: "70%",
-            marginRight: 100,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <h2 css={{ fontSize: 50, marginBottom: 40 }}>Kim jesteśmy?</h2>
-          <p css={{ fontWeight: "lighter", lineHeight: 1.6 }}>
-            XYU to grupa przyjaciół ze Społeczności Chrześcijańskiej Południe w
-            Warszawie. Kochamy Boga i chcemy poznawać Go głębiej. Naszym
-            marzeniem jest, by uwielbienie płynące z kościoła było jak ożywcza
-            rzeka, która zmienia rzeczywistość i przynosi owoce w postaci
-            uwolnienia, uzdrowienia i zbawienia. Chcemy, by to, co robimy,
-            oddawało Bogu chwałę, a Duch Święty realnie objawiał się w swojej
-            mocy. Nie chcemy jedynie tworzyć kolejnego projektu muzycznego –
-            pragniemy głębi, z której wypływać będą nowe dźwięki i teksty. W
-            2018 roku założyliśmy kanał na YT, na którym umieszczamy zarówno
-            autorskie utwory, jak i covery. Stawiamy na wysoką jakość pod
-            względem muzycznym, wizualnym i produkcyjnym.
-          </p>
-        </div>
-        <div
-          css={{
-            flexBasis: 500,
-            height: 600,
-            position: "relative",
-            top: 170,
-            boxShadow: "20px 20px 0px #000",
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1586285470103-37c89aa63de2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80)",
-            backgroundSize: "cover",
-          }}
-        ></div>
-      </BlockWrapper>
+      <CoverPhoto
+        title="XY UWIELBIENIE"
+        imgSrc="https://images.unsplash.com/photo-1515276427842-f85802d514a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3155&q=80"
+      />
+      <Billboard
+        imgSrc="https://images.unsplash.com/photo-1586285470103-37c89aa63de2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80"
+        title="Kim jesteśmy?"
+        description="XYU to grupa przyjaciół ze Społeczności Chrześcijańskiej Południe w Warszawie. Kochamy Boga i chcemy poznawać Go głębiej. Naszym marzeniem jest, by uwielbienie płynące z kościoła było jak ożywcza rzeka, która zmienia rzeczywistość i przynosi owoce w postaci uwolnienia, uzdrowienia i zbawienia. Chcemy, by to, co robimy, oddawało Bogu chwałę, a Duch Święty realnie objawiał się w swojej mocy. Nie chcemy jedynie tworzyć kolejnego projektu muzycznego – pragniemy głębi, z której wypływać będą nowe dźwięki i teksty. W 2018 roku założyliśmy kanał na YT, na którym umieszczamy zarówno autorskie utwory, jak i covery. Stawiamy na wysoką jakość pod względem muzycznym, wizualnym i produkcyjnym."
+      />
+      <LinksGroup {...linksGroupData.data} />
+      <Spacer bgColor="#fff" height={50} />
+      <Collage {...collageData.data} />
       <div css={{ backgroundColor: "#fff", padding: "120px 0 50px 0" }}>
-        <BlockWrapper>
-          <div css={{ maxWidth: 1100, marginRight: "auto" }}>
-            <h2
-              css={{
-                fontSize: 50,
-                color: "#000",
-                fontWeight: "bold",
-                marginBottom: 30,
-              }}
-            >
-              Nasza twórczość
-            </h2>
-            <Song
-              title="Czekam na Ciebie"
-              imgSrc="https://images.unsplash.com/photo-1555819206-7b30da4f1506?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2851&q=80"
-              url="songs/czekam-na-ciebie"
-            />
-            <Song
-              title="Grace to grace"
-              subtitle="Łaski cud"
-              imgSrc="https://images.unsplash.com/photo-1508366717390-1b54517b6cce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-              url="songs/laski-cud"
-            />
-
-            <Link href="/songs">
-              <a
-                css={{
-                  position: "relative",
-                  cursor: "pointer",
-                  display: "block",
-                  marginLeft: "auto",
-                  width: 200,
-                  marginTop: 80,
-                  textAlign: "right",
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  width="100"
-                >
-                  <path
-                    fill="black"
-                    d="M508.875,248.458l-160-160c-4.167-4.167-10.917-4.167-15.083,0c-4.167,4.167-4.167,10.917,0,15.083l141.792,141.792
-			H10.667C4.771,245.333,0,250.104,0,256s4.771,10.667,10.667,10.667h464.917L333.792,408.458c-4.167,4.167-4.167,10.917,0,15.083
-			c2.083,2.083,4.813,3.125,7.542,3.125c2.729,0,5.458-1.042,7.542-3.125l160-160C513.042,259.375,513.042,252.625,508.875,248.458z
-			"
-                  />
-                </svg>
-                <span
-                  css={{
-                    fontSize: 20,
-                    position: "absolute",
-                    left: -10,
-                    top: 10,
-                    color: "#000",
-                  }}
-                >
-                  cała dyskografia
-                </span>
-              </a>
-            </Link>
-          </div>
-        </BlockWrapper>
-        <div
-          css={{
-            height: 500,
-            display: "flex",
-            flexWrap: "wrap",
-            marginTop: 50,
-          }}
-        >
-          {[
-            "https://images.unsplash.com/photo-1588907395850-0bbefa3b1c80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1587579340183-76829fe88b3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1485559131919-ba21c3a6a5ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1583107100518-1eaaf02ce686?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1569564358015-a11afb002245?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1509220676330-01891402eb14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1534387030996-d0af567021d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1575270222557-2f4fa8db36a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1164&q=80",
-          ].map((el) => (
-            <div
-              css={{
-                backgroundImage: `url(${el})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                flexBasis: "25%",
-              }}
-            />
-          ))}
-        </div>
         <div css={{ backgroundColor: "white" }}>
           <BlockWrapper
             css={{
