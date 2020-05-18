@@ -1,3 +1,23 @@
+export const photoData1 = {
+  type: "Photo",
+  data: {
+    imgSrc:
+      "https://images.unsplash.com/photo-1527389123978-53405521c094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3209&q=80",
+    imgAlt: "",
+    position: "-400px",
+  },
+};
+
+export const photoData2 = {
+  type: "Photo",
+  data: {
+    imgSrc:
+      "https://images.unsplash.com/photo-1527389123978-53405521c094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3209&q=80",
+    imgAlt: "",
+    position: "-800px",
+  },
+};
+
 export const simpleBoxData = {
   type: "SimpleBox",
   data: {
@@ -110,6 +130,8 @@ export const indexData = {
     linksGroupData,
     collageData,
     simpleBoxData,
+    photoData1,
+    photoData2,
   ],
 };
 
