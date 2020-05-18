@@ -12,6 +12,7 @@ import { CoverPhoto, CoverPhotoProps } from "../new/CoverPhoto";
 import { Billboard, BillboardProps } from "../new/Billboard";
 import { LinksGroup, LinksGroupProps } from "../new/LinksGroup";
 import { Collage, CollageProps } from "../new/Collage";
+import { SimpleBox, SimpleBoxProps } from "../new/SimpleBox";
 
 interface Component<Type> {
   type: string;
@@ -72,6 +73,10 @@ export const Contents: React.FC<{ components: any }> = ({ components }) => {
 
     if (isType<CollageProps>(component, "Collage")) {
       return <Collage {...component.data} />;
+    }
+
+    if (isType<SimpleBoxProps>(component, "SimpleBox")) {
+      return <SimpleBox {...component.data} />;
     }
   });
 };
