@@ -19,7 +19,9 @@ export const LinksGroup: React.FC<LinksGroupProps> = ({
   link,
 }) => {
   return (
-    <div css={{ backgroundColor: "#fff", paddingTop: 120, paddingBottom: 50 }}>
+    <section
+      css={{ backgroundColor: "#fff", paddingTop: 120, paddingBottom: 50 }}
+    >
       <BlockWrapper>
         <div css={{ maxWidth: 1100, marginRight: "auto" }}>
           <h2
@@ -80,6 +82,6 @@ export const LinksGroup: React.FC<LinksGroupProps> = ({
           </Link>
         </div>
       </BlockWrapper>
-    </div>
+    </section>
   );
 };

@@ -9,7 +9,7 @@ export interface CoverPhotoProps {
 
 export const CoverPhoto: React.FC<CoverPhotoProps> = ({ imgSrc, title }) => {
   return (
-    <div
+    <section
       css={{
         backgroundAttachment: "fixed",
         backgroundImage: `url(${imgSrc})`,
@@ -48,6 +48,6 @@ export const CoverPhoto: React.FC<CoverPhotoProps> = ({ imgSrc, title }) => {
           {title}
         </h1>
       </BlockWrapper>
-    </div>
+    </section>
   );
 };

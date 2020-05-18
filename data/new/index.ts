@@ -1,3 +1,15 @@
+export const simpleBoxData = {
+  type: "SimpleBox",
+  data: {
+    title: "Nasz dom",
+    description:
+      "XY Uwielbienie to muzyka i treści płynące z serca ludzi z kościoła Społeczność Chrześcijańska Południe w Warszawie. To kościół, który w oparciu o naukę Biblii i z mocą Ducha Świętego wspiera ludzi w nawiązywaniu osobistej relacji z Bogiem. Bogiem, który w swojej miłości i mocy ma dla każdego cudowny plan.",
+    subtitle:
+      "Gdzie: Mińska 65, Warszawa<br/>Kiedy: każda niedziela 10: 00 i 12: 00<br/>Odwiedź nas na FB/ schpoludnie<br/>www.schpoludnie.pl",
+    imgSrc: "/images/logo-colour.png",
+  },
+};
+
 export const collageData = {
   type: "Collage",
   data: {
@@ -97,6 +109,7 @@ export const indexData = {
     },
     linksGroupData,
     collageData,
+    simpleBoxData,
   ],
 };
 
