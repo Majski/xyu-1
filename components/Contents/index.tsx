@@ -14,6 +14,7 @@ import { LinksGroup, LinksGroupProps } from "../new/LinksGroup";
 import { Collage, CollageProps } from "../new/Collage";
 import { SimpleBox, SimpleBoxProps } from "../new/SimpleBox";
 import { Photo, PhotoProps } from "../new/Photo";
+import { PhotoBox, PhotoBoxProps } from "../new/PhotoBox";
 
 interface Component<Type> {
   type: string;
@@ -29,9 +30,9 @@ const isType = <Type extends unknown>(
 
 // @ts-ignore
 export const Contents: React.FC<{ components: any }> = ({ components }) => {
-  return components.map((component) => {
+  return components.map((component, index) => {
     if (isType<BannerProps>(component, "Banner")) {
-      return <Banner {...component.data} />;
+      return <Banner key={index} {...component.data} />;
     }
 
     if (isType<ExpanderSectionProps>(component, "ExpanderSection")) {
@@ -39,49 +40,53 @@ export const Contents: React.FC<{ components: any }> = ({ components }) => {
     }
 
     if (isType<null>(component, "Discography")) {
-      return <Discography {...component.data} />;
+      return <Discography key={index} {...component.data} />;
     }
 
     if (isType<ShelfSectionProps>(component, "ShelfSection")) {
-      return <ShelfSection {...component.data} />;
+      return <ShelfSection key={index} {...component.data} />;
     }
 
     if (isType<SongProps>(component, "Song")) {
-      return <Song {...component.data} />;
+      return <Song key={index} {...component.data} />;
     }
 
     if (isType<SongsListProps>(component, "SongsList")) {
-      return <SongsList {...component.data} />;
+      return <SongsList key={index} {...component.data} />;
     }
 
     if (isType<SpacerProps>(component, "Spacer")) {
-      return <Spacer {...component.data} />;
+      return <Spacer key={index} {...component.data} />;
     }
 
     // NEW
 
     if (isType<CoverPhotoProps>(component, "CoverPhoto")) {
-      return <CoverPhoto {...component.data} />;
+      return <CoverPhoto key={index} {...component.data} />;
     }
 
     if (isType<BillboardProps>(component, "Billboard")) {
-      return <Billboard {...component.data} />;
+      return <Billboard key={index} {...component.data} />;
     }
 
     if (isType<LinksGroupProps>(component, "LinksGroup")) {
-      return <LinksGroup {...component.data} />;
+      return <LinksGroup key={index} {...component.data} />;
     }
 
     if (isType<CollageProps>(component, "Collage")) {
-      return <Collage {...component.data} />;
+      return <Collage key={index} {...component.data} />;
     }
 
     if (isType<SimpleBoxProps>(component, "SimpleBox")) {
-      return <SimpleBox {...component.data} />;
+      return <SimpleBox key={index} {...component.data} />;
     }
 
     if (isType<PhotoProps>(component, "Photo")) {
-      return <Photo {...component.data} />;
+      return <Photo key={index} {...component.data} />;
+    }
+
+    if (isType<PhotoBoxProps>(component, "PhotoBox")) {
+      return <PhotoBox key={index} {...component.data} />;
     }
   });
 };

@@ -34,8 +34,9 @@ export const LinksGroup: React.FC<LinksGroupProps> = ({
           >
             {title}
           </h2>
-          {links.map((link) => (
+          {links.map((link, index) => (
             <ImageLink
+              key={index}
               title={link.title}
               subtitle={link.subtitle}
               imgSrc={link.imgSrc}

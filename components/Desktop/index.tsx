@@ -12,11 +12,14 @@ import {
   simpleBoxData,
   photoData1,
   photoData2,
+  photoData3,
+  photoBox,
 } from "../../data/new/index";
 import { Collage } from "../new/Collage";
 import { Spacer } from "../Spacer";
 import { SimpleBox } from "../new/SimpleBox";
 import { Photo } from "../new/Photo";
+import { PhotoBox } from "../new/PhotoBox";
 
 export const Desktop = () => {
   return (
@@ -37,77 +40,10 @@ export const Desktop = () => {
       <Photo {...photoData1.data} />
       <section css={{ height: 800 }}></section>
       <Photo {...photoData2.data} />
+      <PhotoBox {...photoBox.data} />
+      <Photo {...photoData3.data} />
 
       <div css={{ backgroundColor: "#fff", padding: "120px 0 50px 0" }}>
-        <div css={{ backgroundColor: "white" }}>
-          <BlockWrapper
-            css={{
-              height: "calc(100vh - 100px)",
-              position: "relative",
-              padding: "100px 0",
-              display: "flex",
-              alignItems: "center",
-              maxWidth: 1200,
-            }}
-          >
-            <div
-              css={{
-                height: "60vh",
-                width: "100%",
-                margin: "0 40px",
-                position: "relative",
-              }}
-            >
-              <div
-                css={{
-                  width: 400,
-                  height: 600,
-                  backgroundImage:
-                    "url(https://images.unsplash.com/photo-1568172775200-22109a1845b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1164&q=80)",
-                  backgroundSize: "cover",
-                  position: "relative",
-                  zIndex: 100,
-                  boxShadow: "20px 20px 0px #000",
-                }}
-              ></div>
-              <div
-                css={{
-                  backgroundColor: "#000",
-                  position: "absolute",
-                  right: 0,
-                  bottom: 0,
-                  height: "85%",
-                  width: "75%",
-                  padding: "50px 50px 50px 200px",
-                  p: { fontWeight: "lighter" },
-                }}
-              >
-                <h2 css={{ fontSize: 50, marginBottom: 70 }}>
-                  Gdzie nas znajdziesz?
-                </h2>
-                <p css={{ marginBottom: 30 }}>
-                  W każdą pierwszą środę miesiąca, podczas Wieczorów
-                  Uwielbienia, wywyższamy Boga wspólnie z naszym kościołem SCh
-                  Południe. To prawdziwy czas odpoczynku w Bożej Obecności.
-                  Dołącz do nas!
-                </p>
-                <p>
-                  Zapraszamy też na nasz kanał na YT. Pracujemy nad tym, by
-                  nagrań było coraz więcej!
-                </p>
-              </div>
-            </div>
-          </BlockWrapper>
-        </div>
-        <div
-          css={{
-            height: 350,
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
         <div css={{ backgroundColor: "white" }}>
           <BlockWrapper
             css={{

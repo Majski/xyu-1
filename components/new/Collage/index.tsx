@@ -16,8 +16,9 @@ export const Collage: React.FC<CollageProps> = ({ images }) => {
         flexWrap: "wrap",
       }}
     >
-      {images.map((image) => (
+      {images.map((image, index) => (
         <div
+          key={index}
           title={image.alt || undefined}
           css={{
             backgroundImage: `url(${image.imgSrc})`,

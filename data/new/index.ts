@@ -1,3 +1,13 @@
+export const photoBox = {
+  type: "PhotoBox",
+  data: {
+    imgSrc:
+      "https://images.unsplash.com/photo-1568172775200-22109a1845b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1164&q=80",
+    title: "Gdzie nas znajdziesz?",
+    description: `<p style="margin-bottom: 30px;"> W każdą pierwszą środę miesiąca, podczas Wieczorów Uwielbienia, wywyższamy Boga wspólnie z naszym kościołem SCh Południe. To prawdziwy czas odpoczynku w Bożej Obecności. Dołącz do nas! </p> <p> Zapraszamy też na nasz kanał na YT. Pracujemy nad tym, by nagrań było coraz więcej! </p>`,
+  },
+};
+
 export const photoData1 = {
   type: "Photo",
   data: {
@@ -15,6 +25,16 @@ export const photoData2 = {
       "https://images.unsplash.com/photo-1527389123978-53405521c094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3209&q=80",
     imgAlt: "",
     position: "-800px",
+  },
+};
+
+export const photoData3 = {
+  type: "Photo",
+  data: {
+    imgSrc:
+      "https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
+    imgAlt: "",
+    withParallax: false,
   },
 };
 
@@ -132,6 +152,8 @@ export const indexData = {
     simpleBoxData,
     photoData1,
     photoData2,
+    photoBox,
+    photoData3,
   ],
 };
 

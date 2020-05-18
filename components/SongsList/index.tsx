@@ -13,8 +13,9 @@ export interface SongsListProps {
 
 export const SongsList: React.FC<SongsListProps> = ({ songs, ...rest }) => (
   <div {...rest}>
-    {songs.map((song) => (
+    {songs.map((song, index) => (
       <ImageButton
+        key={index}
         imgSrc={song.imgSrc}
         css={{ marginTop: 5 }}
         href={`songs/${song.id}`}
