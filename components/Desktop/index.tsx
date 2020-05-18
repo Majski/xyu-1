@@ -10,10 +10,13 @@ import {
   linksGroupData,
   collageData,
   simpleBoxData,
+  photoData1,
+  photoData2,
 } from "../../data/new/index";
 import { Collage } from "../new/Collage";
 import { Spacer } from "../Spacer";
 import { SimpleBox } from "../new/SimpleBox";
+import { Photo } from "../new/Photo";
 
 export const Desktop = () => {
   return (
@@ -31,36 +34,11 @@ export const Desktop = () => {
       <Spacer bgColor="#fff" height={50} />
       <Collage {...collageData.data} />
       <SimpleBox {...simpleBoxData.data} />
+      <Photo {...photoData1.data} />
+      <section css={{ height: 800 }}></section>
+      <Photo {...photoData2.data} />
+
       <div css={{ backgroundColor: "#fff", padding: "120px 0 50px 0" }}>
-        <div
-          css={{
-            height: 350,
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1527389123978-53405521c094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3209&q=80)",
-            backgroundSize: "cover",
-            backgroundPosition: "0 710px",
-          }}
-        />
-        <div
-          css={{
-            backgroundColor: "#000",
-            height: "calc(100vh - 100px)",
-            padding: "100px 0",
-          }}
-        >
-          <BlockWrapper>
-            <h2 css={{ fontSize: 50, fontWeight: "bold" }}>Jezus</h2>
-          </BlockWrapper>
-        </div>
-        <div
-          css={{
-            height: 350,
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1527389123978-53405521c094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3209&q=80)",
-            backgroundSize: "cover",
-            backgroundPosition: "bottom",
-          }}
-        />
         <div css={{ backgroundColor: "white" }}>
           <BlockWrapper
             css={{
